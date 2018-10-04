@@ -13,13 +13,13 @@
 
 makeCacheMatrix <- function(m = matrix()){
         #set up the function and args with a default of an empty matrix
-        cacheinv <- NULL
+        cacheinv <<- NULL
         #empty any cache that might already be there
         #
         set <- function(y) {
                 m <<- y
                 #write new values into m in parent environment
-                cacheinv <- NULL
+                cacheinv <<- NULL
                 #clear cache in parent environment
         }
         #set up a way to reset values of an active instance
